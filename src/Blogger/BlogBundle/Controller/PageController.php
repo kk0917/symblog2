@@ -47,7 +47,7 @@ class PageController extends Controller
                     ->setBody($this->renderView('BloggerBlogBundle:Page:contactEmail.txt.twig', array('enquiry' => $enquiry)));
                 $this->get('mailer')->send($message);
 
-                $this->get('session')->getFlashBag()->set('notice', '更新しました。');
+                $this->get('session')->getFlashBag()->set('blogger-notice', 'メールを送信しました。');
 
                 // Redirect - This is important to prevent users re-posting
                 // the form if they refresh the page

@@ -12,7 +12,7 @@
     {% if app.session.flashBag.has('blogger-notice') %}
         <div class="blogger-notice">
             {{ app.session.flashBag.get('blogger-notice') }}
-            {% for flashMessage in app.session.flashBag.get('hoge') %}
+            {% for flashMessage in app.session.flashBag.get('blogger-notice') %}
                 {{ flashMessage }}
             {% endfor %}
         </div>
