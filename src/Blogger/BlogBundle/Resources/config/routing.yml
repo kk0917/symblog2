@@ -5,6 +5,12 @@ BloggerBlogBundle_homepage:
     requirements:
         _method:  GET
 
+BloggerBlogBundle_sidebar:
+    pattern:  /
+    defaults: { _controller: BloggerBlogBundle:Page:sidebar }
+    requirements:
+        _method:  GET
+
 BloggerBlogBundle_about:
     pattern:  /about
     defaults: { _controller: BloggerBlogBundle:Page:about }
