@@ -23,6 +23,11 @@ class Blog
     /**
      * @ORM\Column(type="string")
      */
+    protected $slug;
+
+    /**
+     * @ORM\Column(type="string")
+     */
     protected $title;
 
     /**
@@ -286,5 +291,28 @@ class Blog
     public function getComments()
     {
         return $this->comments;
+    }
+
+    /**
+     * Set slug
+     *
+     * @param string $slug
+     * @return Blog
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+
+        return $this;
+    }
+
+    /**
+     * Get slug
+     *
+     * @return string 
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 }
